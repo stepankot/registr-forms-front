@@ -1,0 +1,127 @@
+@font-face {
+	font-family: 'Jersey';
+	src: url('./fonts/Jersey10-Regular.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+:root {
+	background-color: rgba(243, 181, 249, 0.532);
+	font-family: 'Jersey';
+}
+
+h1 {
+	font-family: 'Jersey';
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+
+input {
+	padding: 10px;
+	border-radius: 10px;
+	outline: none;
+	border: 3px solid transparent;
+	transition: all ease-in-out 0.2s;
+	box-sizing: border-box;
+}
+
+input:focus {
+	box-sizing: border-box;
+	border: 3px solid rgb(127, 92, 239);
+}
+
+label {
+	font-size: 20px;
+	color: white;
+}
+
+button[type='submit'] {
+	color: white;
+	letter-spacing: 1px;
+	font-family: 'Jersey';
+	font-size: 30px;
+
+	padding: 10px;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	transition: all ease-in-out 0.3s;
+	background-color: rgba(185, 127, 246, 0.669);
+
+	transform-origin: center;
+	backface-visibility: hidden;
+	will-change: transform;
+}
+
+button[type='submit']:hover {
+	cursor: pointer;
+	background: rgb(185, 127, 246);
+	box-shadow: 0px 0px 20px 8px rgba(209, 25, 246, 0.311);
+}
+
+button[type='submit']:active {
+	cursor: pointer;
+	background: rgb(185, 127, 246);
+	transform: scale(0.99);
+	box-shadow: 0px 0px 10px 4px rgba(209, 25, 246, 0.801);
+}
+
+button:disabled {
+	background: gainsboro;
+	color: rgba(0, 0, 0, 0.502);
+}
+button:disabled:hover {
+	background: gainsboro;
+	color: rgba(0, 0, 0, 0.502);
+	box-shadow: none;
+	transform: none;
+}
+
+.page {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+.errorBlock {
+	position: fixed;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	text-align: center;
+	padding: 20px;
+	color: red;
+	font-size: 25px;
+}
+
+.errorField {
+	border: 3px solid rgb(255, 0, 0);
+}
+.register-container {
+	margin-top: 100px;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.92);
+	box-shadow: 0px 0px 10px 8px rgba(253, 169, 253, 0.621);
+	width: 250px;
+	border-radius: 15px;
+}
+
+.form-group {
+	display: grid;
+	gap: 20px;
+}
+
+.field {
+	display: grid;
+	gap: 2px;
+}
+
+.fieldName {
+	display: flex;
+}
+
+.errorSym {
+	color: red;
+	font-size: 20px;
+	margin-left: 10px;
+}
