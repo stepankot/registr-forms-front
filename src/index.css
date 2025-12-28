@@ -65,6 +65,9 @@ button[type='submit']:active {
 	transform: scale(0.99);
 	box-shadow: 0px 0px 10px 4px rgba(209, 25, 246, 0.801);
 }
+button[type='submit']:focus {
+	opacity: 1.2;
+}
 
 button:disabled {
 	background: gainsboro;
@@ -84,7 +87,7 @@ button:disabled:hover {
 }
 .errorBlock {
 	position: fixed;
-	top: 65%;
+	top: 70%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 
@@ -124,4 +127,31 @@ button:disabled:hover {
 	color: red;
 	font-size: 20px;
 	margin-left: 10px;
+}
+
+.second {
+	background-color: rgba(11, 77, 2, 0.881);
+}
+.second button {
+	background: rgba(100, 181, 248, 0.518);
+}
+.second button:hover {
+	background: rgba(140, 197, 243, 0.703);
+	color: rgba(250, 250, 250, 0.628);
+	box-shadow: 0px 0px 0px 0px;
+}
+
+.move {
+	outline: none;
+	padding: 10px;
+	font-family: 'Jersey';
+	font-size: 20px;
+	border: rgba(0, 0, 0, 0.208) 2px solid;
+	transition: all ease-in-out 0.2s;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.move:hover {
+	background: rgb(170, 170, 248);
 }

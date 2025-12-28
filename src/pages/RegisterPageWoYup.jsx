@@ -8,10 +8,10 @@ const initialState = {
 	confirmPassword: ''
 }
 
-export default function RegisterPageWoYup() {
+export default function RegisterPageWoYup({ setPage }) {
 	const [formData, setFormData] = useState(initialState)
 	const [validationError, setValidationError] = useState(null)
-	const registerButtonRef = useRef()
+	const registerButtonRef = useRef(null)
 
 	const onSubmit = event => {
 		event.preventDefault()
@@ -60,8 +60,20 @@ export default function RegisterPageWoYup() {
 		}
 	}, [formData])
 
+	useEffect(() => {
+		if (!validationError) {
+			registerButtonRef.current.focus()
+		}
+	}, [validationError])
+
 	return (
 		<div className="page">
+			<button
+				className="move"
+				onClick={() => setPage('second')}
+			>
+				Move to Register Form With Yup
+			</button>
 			<div className="register-container">
 				<form
 					className="form-group"
